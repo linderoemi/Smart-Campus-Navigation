@@ -18,6 +18,10 @@ struct DepartmentNode {
 class DepartmentTree {
 private:
     DepartmentNode* root;
+    void deleteTree(DepartmentNode* node);
+    DepartmentNode* findDepartment(
+        DepartmentNode* node,
+        const string& name) const;
 public:
     DepartmentTree();
     ~DepartmentTree();
