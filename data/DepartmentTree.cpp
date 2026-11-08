@@ -50,6 +50,21 @@ DepartmentNode* DepartmentTree::findDepartment(
 bool Departmenttree::isEmpty() const {
   return root == nullptr;
 }
+
+string DepartmentTree::trim(const string& value) const {
+    size_t first = value.find_first_not_of(" \t\r\n");
+    return value.substr(first, last - first + 1);
+}
+
+string DepartmentTree::normalizeName(const string& name) const {
+    string result = name;
+
+    transform(result.begin(), result.end(), result.begin(),
+        [](unsigned char character) {
+            return static_cast<char>(tolower(character));
+        });
+   return result;
+}
     
 
 
