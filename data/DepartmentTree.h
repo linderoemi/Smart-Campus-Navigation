@@ -22,6 +22,8 @@ private:
     DepartmentNode* findDepartment(
         DepartmentNode* node,
         const string& name) const;
+    string normalizeName(const string& name) const;
+    string trim(const string& value) const;
 public:
     DepartmentTree();
     ~DepartmentTree();
