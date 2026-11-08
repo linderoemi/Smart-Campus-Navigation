@@ -4,10 +4,16 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 struct DepartmentNode {
     std::string name;
     DepartmentNode* parent;
     std::vector<DepartmentNode*> children;
+
+    DepartmentNode(const string& departmentName,
+                   DepartmentNode* parentNode)
+       : name(departmentName), parent(parentNode) {}
 );
 class DepartmentTree {
 private:
