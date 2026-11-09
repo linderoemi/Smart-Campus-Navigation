@@ -58,6 +58,8 @@ int main(){
 
     
     g.loadGraph(bfilename, cfilename);
+    int facilitiesAccepted = 0, facilitiesRejected = 0;
+    facilityDatabase.loadFromFile(ffilename, g.getBuildingNames(), facilitiesAccepted, facilitiesRejected);
 
 
     int choice;
