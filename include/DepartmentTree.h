@@ -11,10 +11,9 @@ struct DepartmentNode {
     DepartmentNode* parent;
     std::vector<DepartmentNode*> children;
 
-    DepartmentNode(const string& departmentName,
-                   DepartmentNode* parentNode)
-       : name(departmentName), parent(parentNode) {}
-);
+    DepartmentNode(const string& departmentName, DepartmentNode* parentNode)
+        : name(departmentName), parent(parentNode) {}
+    };
 class DepartmentTree {
 private:
     DepartmentNode* root;
@@ -29,7 +28,7 @@ void displayHierarchyHelper(DepartmentNode* node, int depth) const;
 public:
     DepartmentTree();
     ~DepartmentTree();
-    DepartmentTree)const DepartmentTree&) = delete;
+    DepartmentTree(const DepartmentTree&) = delete;
     DepartmentTree& operator=(const DepartmentTree&) = delete;
 
     bool loadFromFile(const std::string& filename,

@@ -1,0 +1,5 @@
+Joey Scumaci: Member A
+Emilly Lindero: Member B
+    Files owned: Graph.h, Graph.cpp, b_buildings.txt
+Marshall Gillespie: Member C
+    Files owned: DepartmentTree.cpp, DepartmentTree.h
