@@ -93,3 +93,11 @@ void Graph::loadGraph(string vfilename, string efilename){
     efile.close();
     }
 }
+
+vector<string> Graph::getBuildingNames(){
+    vector<string> buildingNames;
+    for (const auto& [node, neighbors] : adjList){
+        buildingNames.push_back(node);
+    }
+    return buildingNames;
+}
