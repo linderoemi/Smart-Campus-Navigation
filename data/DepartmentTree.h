@@ -24,6 +24,8 @@ private:
         const string& name) const;
     string normalizeName(const string& name) const;
     string trim(const string& value) const;
+void displayHierarchyHelper(DepartmentNode* node, int depth) const;
+
 public:
     DepartmentTree();
     ~DepartmentTree();
