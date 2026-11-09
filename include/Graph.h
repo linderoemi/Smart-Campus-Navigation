@@ -18,6 +18,9 @@ class Graph{
         void degreeCount();
         void loadGraph(string vfilename, string efilename);
 
+        //for member a loadfile argument
+        vector<string> getBuildingNames();
+
 };
 
 #endif

@@ -173,7 +173,7 @@ bool DepartmentTree::loadFromFile(
     }
     inputFile.close();
     cout << "Department loading complete." << endl;
-    cout << "Accepted records: " << accepted <<, endl;
+    cout << "Accepted records: " << accepted << endl;
     cout << "Rejected records: " << rejected <<endl;
     return true;
 }
