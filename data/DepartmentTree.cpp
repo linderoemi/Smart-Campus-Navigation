@@ -224,8 +224,46 @@ bool DepartmentTree::addDepartment(
     cout << "Department added successfully." << endl;
     return true;
 }
+const DepartmentNode* DepartmentTree::searchDepartment(
+    const string& name) const {
 
+    DepartmentNode* department = findDepartment(root, name);
 
+    if (department == nullptr) {
+        cout << "Department not found." << endl;
+        return nullptr;
+    }
+    string parentName;
+
+    if (department->parent == nullptr) {
+        parentName = "None";
+    }
+    else {
+         parentName = department->parent->name;
+    }
+
+    int depth = 0;
+    DepartmentNode* current = department;
+
+    while (current->parent != nullptr) {
+        depth++;
+        current = current->parent;
+    }
+
+    cout << "\nDepartment Name: "
+         << department->name << endl;
+
+    cout << "Parent Department: "
+         << parentName << endl;
+
+    cout << "Direct Children: "
+         << department->children.size() << endl;
+
+    cout << "Depth: "
+         << depth << endl;
+
+    return department;
+}
 
 
 
