@@ -264,6 +264,32 @@ const DepartmentNode* DepartmentTree::searchDepartment(
 
     return department;
 }
+void DepartmentTree::displayHierarchyHelper(
+    DepartmentNode* node,
+    int depth) const {
+
+    if (node == nullptr) {
+         return;
+    }
+
+    for (int i = 0; i < depth; i++) {
+        cout << "    ";
+    }
+    cout << node->name << endl;
+
+    for (DepartmentNode* child : node->children) {
+        displayHierarchyHelper(child, depth + 1);
+    }
+}
+
+void DepartmentTree::displayHierarchy() const {
+
+    if (root == nullptr) {
+        cout << "The department tree is empty." << endl;
+        return;
+    }
+    displayHierarchyHelper(root, 0);
+}
 
 
 
