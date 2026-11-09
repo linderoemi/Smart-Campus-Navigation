@@ -5,7 +5,7 @@
 
 using namespace std;
 
-HashTable::H ashTable() : buckets(CAPACITY) {
+HashTable::HashTable() : buckets(CAPACITY) {
     entries = 0;
     collisions = 0;
 }

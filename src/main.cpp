@@ -1,4 +1,6 @@
 #include "Graph.h"
+#include "HashTable.h"
+#include "FacilityDatabase.h"
 
 #include <iostream>
 #include <vector>
@@ -37,6 +39,7 @@ void displayMenu()
 int main(){
 
     Graph g;
+    FacilityDatabase facilityDatabase;
 
 
     string bfilename;
@@ -74,10 +77,14 @@ int main(){
 
         if (choice == 1){
             //View All Facilities function
-            cout << "Viewing all facilities..." << endl;
+            facilityDatabase.displayAll();
         }
         else if (choice == 2){
             //Search Facility by ID function
+            string ID;
+            cout << "Enter facility ID: ";
+            cin >> ID;
+            facilityDatabase.searchByID(ID);
         }
         else if (choice == 3){
             g.printGraph();

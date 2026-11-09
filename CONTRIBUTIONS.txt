@@ -1,4 +1,5 @@
 Joey Scumaci: Member A
+    Files owned: FacilityDatabase.h, HashTable.h, FacilityDatabase.cpp, HashTable.h, testdata/collision/buildings.txt, testdata/collision/facilities.txt
 Emilly Lindero: Member B
     Files owned: Graph.h, Graph.cpp, b_buildings.txt
 Marshall Gillespie: Member C
