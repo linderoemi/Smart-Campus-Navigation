@@ -177,7 +177,59 @@ bool DepartmentTree::loadFromFile(
     cout << "Rejected records: " << rejected <<endl;
     return true;
 }
-           
+bool DepartmentTree::addDepartment(
+    const string& name,
+    const string& parentName) {
+
+    string departmentName = trim(name);
+    string parentDepartment = trim(parentName);
+
+    if (departmentName.empty()) {
+        cout << "Error: Department name cannot be empty."
+             << endl;
+        return false;
+    }
+    if (findDepartment(root, departmentName) != nullptr) {
+       cout << "Error: Department already exists."
+            << endl;
+       return false;
+    }
+
+    if (root == nullptr) {
+        root = new DepartmentNode(departmentName, nullptr);
+
+        cout << "Root department added successfully."
+             << endl;
+        return true;
+    }
+
+    if (parentDepartment.empty()) {
+        cout << "Error: Parent department is required."
+             << endl;
+        return false;
+    }
+    DepartmentNode* parent =
+        findDepartment(root, parentDepartment);
+    if (parent == nullptr) {
+        cout << "Error: Parent department not found."
+             << endl;
+        return false;
+    }
+
+    DepartmentNode* newDepartment =
+       new DepartmentNode(departmentName, parent);
+
+    parent->children.push_back(newDepartment);
+
+    cout << "Department added successfully." << endl;
+    return true;
+}
+
+
+
+
+
+
             
 
     
