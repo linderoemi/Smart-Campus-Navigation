@@ -35,7 +35,7 @@ DepartmentNode* DepartmentTree::findDepartment(
         return nullptr;
     }
     
-    if (normalizeName(node->name == name) == normalizeName(name)){
+    if (normalizeName(node->name) == normalizeName(name)){
          return node;
     }
 
@@ -46,7 +46,7 @@ DepartmentNode* DepartmentTree::findDepartment(
              return result;
          }
     }
- return nullptr
+ return nullptr;
 }
 
 bool DepartmentTree::isEmpty() const {
@@ -130,7 +130,7 @@ bool DepartmentTree::loadFromFile(
         if (findDepartment(root, departmentName) != nullptr) {
             cout << filename << ":" << lineNumber
                  << ": Duplicate department name: "
-                 << departmentName < endl;
+                 << departmentName << endl;
             rejected++;
             continue;
         }
@@ -173,7 +173,7 @@ bool DepartmentTree::loadFromFile(
     }
     inputFile.close();
     cout << "Department loading complete." << endl;
-    cout << "Accepted records: " << accepted <, endl;
+    cout << "Accepted records: " << accepted <<, endl;
     cout << "Rejected records: " << rejected <<endl;
     return true;
 }
