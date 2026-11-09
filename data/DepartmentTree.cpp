@@ -291,6 +291,25 @@ void DepartmentTree::displayHierarchy() const {
     displayHierarchyHelper(root, 0);
 }
 
+void DepartmentTree:: preorderHelper(DepartmentNode* node) const {
+    if (node == nullptr) {
+        return;
+    }
+
+     cout << node->name << endl;
+
+     for (DepartmentNode* child : node->children) {
+         preorderHelper(child);
+     }
+}
+void DepartmentTree::displayPreorder() const {
+    if (root == nullptr) {
+        cout << "The department tree is empty." << endl;
+        return;
+    }
+    cout << "Preorder traversal:" << endl;
+    preorderHelper(root);
+}
 
 
 
