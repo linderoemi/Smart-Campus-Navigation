@@ -1,0 +1,4 @@
+# F001 and F013 both hash to bucket 3 with capacity 11.
+F001|First Room|Library|Study
+F013|Second Room|Library|Study
+f001|Must Not Replace First Room|Library|Study
