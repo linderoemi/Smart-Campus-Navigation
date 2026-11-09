@@ -1,3 +1,5 @@
+Github URL: https://github.com/linderoemi/Smart-Campus-Navigation.git
+
 Joey Scumaci: Member A
     Files owned: FacilityDatabase.h, HashTable.h, FacilityDatabase.cpp, HashTable.h, testdata/collision/buildings.txt, testdata/collision/facilities.txt
 Emilly Lindero: Member B
